@@ -3,6 +3,274 @@
 ;;; Code:
 
 
+;;;### (autoloads nil "company-mode/company" "company-mode/company.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company.el
+
+(autoload 'company-mode "company-mode/company" "\
+\"complete anything\"; is an in-buffer completion framework.
+Completion starts automatically, depending on the values
+`company-idle-delay' and `company-minimum-prefix-length'.
+
+Completion can be controlled with the commands:
+`company-complete-common', `company-complete-selection', `company-complete',
+`company-select-next', `company-select-previous'.  If these commands are
+called before `company-idle-delay', completion will also start.
+
+Completions can be searched with `company-search-candidates' or
+`company-filter-candidates'.  These can be used while completion is
+inactive, as well.
+
+The completion data is retrieved using `company-backends' and displayed
+using `company-frontends'.  If you want to start a specific backend, call
+it interactively or use `company-begin-backend'.
+
+By default, the completions list is sorted alphabetically, unless the
+backend chooses otherwise, or `company-transformers' changes it later.
+
+regular keymap (`company-mode-map'):
+
+\\{company-mode-map}
+keymap during active completions (`company-active-map'):
+
+\\{company-active-map}
+
+\(fn &optional ARG)" t nil)
+
+(defvar global-company-mode nil "\
+Non-nil if Global-Company mode is enabled.
+See the command `global-company-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-company-mode'.")
+
+(custom-autoload 'global-company-mode "company-mode/company" nil)
+
+(autoload 'global-company-mode "company-mode/company" "\
+Toggle Company mode in all buffers.
+With prefix ARG, enable Global-Company mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
+
+Company mode is enabled in all buffers where
+`company-mode-on' would do it.
+See `company-mode' for more information on Company mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-abbrev" "company-mode/company-abbrev.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-abbrev.el
+
+(autoload 'company-abbrev "company-mode/company-abbrev" "\
+`company-mode' completion backend for abbrev.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-bbdb" "company-mode/company-bbdb.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-bbdb.el
+
+(autoload 'company-bbdb "company-mode/company-bbdb" "\
+`company-mode' completion backend for BBDB.
+
+\(fn COMMAND &optional ARG &rest IGNORE)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-css" "company-mode/company-css.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-css.el
+
+(autoload 'company-css "company-mode/company-css" "\
+`company-mode' completion backend for `css-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-dabbrev" "company-mode/company-dabbrev.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-dabbrev.el
+
+(autoload 'company-dabbrev "company-mode/company-dabbrev" "\
+dabbrev-like `company-mode' completion backend.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-dabbrev-code" "company-mode/company-dabbrev-code.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-dabbrev-code.el
+
+(autoload 'company-dabbrev-code "company-mode/company-dabbrev-code" "\
+dabbrev-like `company-mode' backend for code.
+The backend looks for all symbols in the current buffer that aren't in
+comments or strings.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-elisp" "company-mode/company-elisp.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-elisp.el
+
+(autoload 'company-elisp "company-mode/company-elisp" "\
+`company-mode' completion backend for Emacs Lisp.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-etags" "company-mode/company-etags.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-etags.el
+
+(autoload 'company-etags "company-mode/company-etags" "\
+`company-mode' completion backend for etags.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-files" "company-mode/company-files.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-files.el
+
+(autoload 'company-files "company-mode/company-files" "\
+`company-mode' completion backend existing file names.
+Completions works for proper absolute and relative files paths.
+File paths with spaces are only supported inside strings.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-gtags" "company-mode/company-gtags.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-gtags.el
+
+(autoload 'company-gtags "company-mode/company-gtags" "\
+`company-mode' completion backend for GNU Global.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-ispell" "company-mode/company-ispell.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-ispell.el
+
+(autoload 'company-ispell "company-mode/company-ispell" "\
+`company-mode' completion backend using Ispell.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-keywords" "company-mode/company-keywords.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-keywords.el
+
+(autoload 'company-keywords "company-mode/company-keywords" "\
+`company-mode' backend for programming language keywords.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-nxml" "company-mode/company-nxml.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-nxml.el
+
+(autoload 'company-nxml "company-mode/company-nxml" "\
+`company-mode' completion backend for `nxml-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-oddmuse" "company-mode/company-oddmuse.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-oddmuse.el
+
+(autoload 'company-oddmuse "company-mode/company-oddmuse" "\
+`company-mode' completion backend for `oddmuse-mode'.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-semantic" "company-mode/company-semantic.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-semantic.el
+
+(autoload 'company-semantic "company-mode/company-semantic" "\
+`company-mode' completion backend using CEDET Semantic.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-tempo" "company-mode/company-tempo.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-tempo.el
+
+(autoload 'company-tempo "company-mode/company-tempo" "\
+`company-mode' completion backend for tempo.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-xcode" "company-mode/company-xcode.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-xcode.el
+
+(autoload 'company-xcode "company-mode/company-xcode" "\
+`company-mode' completion backend for Xcode projects.
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "company-mode/company-yasnippet" "company-mode/company-yasnippet.el"
+;;;;;;  (22039 55285 0 0))
+;;; Generated autoloads from company-mode/company-yasnippet.el
+
+(autoload 'company-yasnippet "company-mode/company-yasnippet" "\
+`company-mode' backend for `yasnippet'.
+
+This backend should be used with care, because as long as there are
+snippets defined for the current major mode, this backend will always
+shadow backends that come after it.  Recommended usages:
+
+* In a buffer-local value of `company-backends', grouped with a backend or
+  several that provide actual text completions.
+
+  (add-hook 'js-mode-hook
+            (lambda ()
+              (set (make-local-variable 'company-backends)
+                   '((company-dabbrev-code company-yasnippet)))))
+
+* After keyword `:with', grouped with other backends.
+
+  (push '(company-semantic :with company-yasnippet) company-backends)
+
+* Not in `company-backends', just bound to a key.
+
+  (global-set-key (kbd \"C-c y\") 'company-yasnippet)
+
+\(fn COMMAND &optional ARG &rest IGNORE)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22039 578
 ;;;;;;  0 0))
 ;;; Generated autoloads from el-get/el-get.el
@@ -180,6 +448,73 @@ object or a file path.
 Display a list of packages.
 
 \(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "emmet-mode/emmet-mode" "emmet-mode/emmet-mode.el"
+;;;;;;  (22040 6995 0 0))
+;;; Generated autoloads from emmet-mode/emmet-mode.el
+
+(autoload 'emmet-expand-line "emmet-mode/emmet-mode" "\
+Replace the current line's emmet expression with the corresponding expansion.
+If prefix ARG is given or region is visible call `emmet-preview' to start an
+interactive preview.
+
+Otherwise expand line directly.
+
+For more information see `emmet-mode'.
+
+\(fn ARG)" t nil)
+
+(autoload 'emmet-mode "emmet-mode/emmet-mode" "\
+Minor mode for writing HTML and CSS markup.
+With emmet for HTML and CSS you can write a line like
+
+  ul#name>li.item*2
+
+and have it expanded to
+
+  <ul id=\"name\">
+    <li class=\"item\"></li>
+    <li class=\"item\"></li>
+  </ul>
+
+This minor mode defines keys for quick access:
+
+\\{emmet-mode-keymap}
+
+Home page URL `http://www.emacswiki.org/emacs/Emmet'.
+
+See also `emmet-expand-line'.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'emmet-expand-yas "emmet-mode/emmet-mode" "\
+
+
+\(fn)" t nil)
+
+(autoload 'emmet-preview "emmet-mode/emmet-mode" "\
+Expand emmet between BEG and END interactively.
+This will show a preview of the expanded emmet code and you can
+accept it or skip it.
+
+\(fn BEG END)" t nil)
+
+(autoload 'emmet-wrap-with-markup "emmet-mode/emmet-mode" "\
+Wrap region with markup.
+
+\(fn WRAP-WITH)" t nil)
+
+(autoload 'emmet-next-edit-point "emmet-mode/emmet-mode" "\
+
+
+\(fn COUNT)" t nil)
+
+(autoload 'emmet-prev-edit-point "emmet-mode/emmet-mode" "\
+
+
+\(fn COUNT)" t nil)
 
 ;;;***
 
@@ -532,11 +867,24 @@ A mode for creating a rectangular region to edit
 
 ;;;***
 
-;;;### (autoloads nil nil ("el-get/el-get-autoloading.el" "el-get/el-get-build.el"
-;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
-;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
-;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
-;;;;;;  "el-get/el-get-status.el" "expand-region/cc-mode-expansions.el"
+;;;### (autoloads nil "web-mode/web-mode" "web-mode/web-mode.el"
+;;;;;;  (22040 7273 0 0))
+;;; Generated autoloads from web-mode/web-mode.el
+
+(autoload 'web-mode "web-mode/web-mode" "\
+Major mode for editing web templates.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("company-mode/company-capf.el" "company-mode/company-clang.el"
+;;;;;;  "company-mode/company-cmake.el" "company-mode/company-eclim.el"
+;;;;;;  "company-mode/company-template.el" "company-mode/company-tests.el"
+;;;;;;  "el-get/el-get-autoloading.el" "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
+;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "expand-region/cc-mode-expansions.el"
 ;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
 ;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
 ;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
@@ -549,9 +897,12 @@ A mode for creating a rectangular region to edit
 ;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
 ;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/subword-mode-expansions.el"
 ;;;;;;  "expand-region/text-mode-expansions.el" "expand-region/the-org-mode-expansions.el"
-;;;;;;  "expand-region/web-mode-expansions.el" "multiple-cursors/mc-cycle-cursors.el"
-;;;;;;  "multiple-cursors/multiple-cursors-pkg.el" "multiple-cursors/multiple-cursors.el")
-;;;;;;  (22039 14814 786017 0))
+;;;;;;  "expand-region/web-mode-expansions.el" "moe-theme/moe-dark-theme.el"
+;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
+;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
+;;;;;;  "multiple-cursors/mc-cycle-cursors.el" "multiple-cursors/multiple-cursors-pkg.el"
+;;;;;;  "multiple-cursors/multiple-cursors.el" "zenburn/zenburn.el")
+;;;;;;  (22040 8258 859459 0))
 
 ;;;***
 

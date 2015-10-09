@@ -1,4 +1,19 @@
-((company-mode status "installed" recipe
+((color-theme status "installed" recipe
+	      (:name color-theme :description "An Emacs-Lisp package with more than 50 color themes for your use. For questions about color-theme" :website "http://www.nongnu.org/color-theme/" :type http-tar :options
+		     ("xzf")
+		     :url "http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz" :load "color-theme.el" :features "color-theme" :post-init
+		     (progn
+		       (color-theme-initialize)
+		       (setq color-theme-is-global t))))
+ (color-theme-sanityinc-tomorrow status "installed" recipe
+				 (:name color-theme-sanityinc-tomorrow :description "Two pleasant medium-contrast Emacs color themes in light and dark flavours" :type github :pkgname "purcell/color-theme-sanityinc-tomorrow" :depends color-theme :prepare
+					(progn
+					  (autoload 'color-theme-sanityinc-tomorrow-day "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-day" t)
+					  (autoload 'color-theme-sanityinc-tomorrow-night "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-night" t)
+					  (autoload 'color-theme-sanityinc-tomorrow-blue "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-blue" t)
+					  (autoload 'color-theme-sanityinc-tomorrow-bright "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-bright" t)
+					  (autoload 'color-theme-sanityinc-tomorrow-eighties "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-eighties" t))))
+ (company-mode status "installed" recipe
 	       (:name company-mode :website "http://company-mode.github.io/" :description "Modular in-buffer completion framework for Emacs" :type github :pkgname "company-mode/company-mode"))
  (el-get status "installed" recipe
 	 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "master" :pkgname "dimitri/el-get" :info "." :compile

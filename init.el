@@ -11,7 +11,7 @@
 ;; look and feel preferences
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
+(global-set-key [f8] 'neotree-toggle)
 
 ;; Multiple cursors keybindings
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -22,6 +22,21 @@
 
 ;; Expand Regions
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+
+;; Neotree stuff
+(defun neotree-ffip-project-dir ()
+    "Open NeoTree using the git root."
+    (interactive)
+    (let ((project-dir (ffip-project-root))
+          (file-name (buffer-file-name)))
+      (if project-dir
+          (progn
+            (neotree-dir project-dir)
+            (neotree-find file-name))
+        (message "Could not find git project root."))))
+  
+  (global-set-key (kbd "C-c C-p") 'neotree-ffip-project-dir)
 
 ;; Auto complete
 ;; Company mode

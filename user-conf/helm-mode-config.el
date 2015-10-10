@@ -27,3 +27,4 @@
 ;; Projectile Keybndings yes, I don't need all
 (global-set-key (kbd "C-c p") 'helm-projectile-find-file-dwim)
 (global-set-key (kbd "C-c d") 'helm-projectile-find-dir)
+(global-set-key (kbd "C-c s") 'helm-projectile-switch-project)

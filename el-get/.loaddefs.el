@@ -621,6 +621,52 @@ Display a list of packages.
 
 ;;;***
 
+;;;### (autoloads nil "emacs-neotree/neotree" "emacs-neotree/neotree.el"
+;;;;;;  (22040 36819 0 0))
+;;; Generated autoloads from emacs-neotree/neotree.el
+
+(autoload 'neotree-find "emacs-neotree/neotree" "\
+Quick select node which specified PATH in NeoTree.
+If path is nil and no buffer file name, then use DEFAULT-PATH,
+
+\(fn &optional PATH DEFAULT-PATH)" t nil)
+
+(autoload 'neotree-projectile-action "emacs-neotree/neotree" "\
+Integration with `Projectile'.
+
+Usage:
+    (setq projectile-switch-project-action 'neotree-projectile-action).
+
+When running `projectile-switch-project' (C-c p p), `neotree' will change root
+automatically.
+
+\(fn)" t nil)
+
+(autoload 'neotree-toggle "emacs-neotree/neotree" "\
+Toggle show the NeoTree window.
+
+\(fn)" t nil)
+
+(autoload 'neotree-show "emacs-neotree/neotree" "\
+Show the NeoTree window.
+
+\(fn)" t nil)
+
+(autoload 'neotree-hide "emacs-neotree/neotree" "\
+Close the NeoTree window.
+
+\(fn)" t nil)
+
+(autoload 'neotree-dir "emacs-neotree/neotree" "\
+Show the NeoTree window, and change root to PATH.
+
+\(fn PATH)" t nil)
+
+(defalias 'neotree 'neotree-show "\
+Show the NeoTree window.")
+
+;;;***
+
 ;;;### (autoloads nil "emmet-mode/emmet-mode" "emmet-mode/emmet-mode.el"
 ;;;;;;  (22040 6995 0 0))
 ;;; Generated autoloads from emmet-mode/emmet-mode.el
@@ -1514,7 +1560,7 @@ Major mode for editing web templates.
 ;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
 ;;;;;;  "multiple-cursors/mc-cycle-cursors.el" "multiple-cursors/multiple-cursors-pkg.el"
 ;;;;;;  "multiple-cursors/multiple-cursors.el" "s/s.el" "zenburn/zenburn.el")
-;;;;;;  (22040 10998 67867 0))
+;;;;;;  (22040 36819 973502 0))
 
 ;;;***
 

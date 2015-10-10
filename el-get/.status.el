@@ -39,6 +39,8 @@
 			  (feat feats)
 			(unload-feature feat t))))
 		  (require 'el-get))))
+ (emacs-neotree status "installed" recipe
+		(:name emacs-neotree :description "A emacs tree plugin like NerdTree for Vim." :website "https://github.com/jaypei/emacs-neotree" :type github :pkgname "jaypei/emacs-neotree"))
  (emmet-mode status "installed" recipe
 	     (:name emmet-mode :website "https://github.com/smihica/emmet-mode" :description "Produce HTML from CSS-like selectors." :type "github" :branch "master" :pkgname "smihica/emmet-mode"))
  (epl status "installed" recipe

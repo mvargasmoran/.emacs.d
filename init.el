@@ -1,25 +1,16 @@
 ;; User configurations files
+(load "~/.emacs.d/user-conf/el-get-config.el") ;; first things first
+
 (load "~/.emacs.d/user-conf/web-mode-config.el")
 (load "~/.emacs.d/user-conf/helm-mode-config.el")
+(load "~/.emacs.d/user-conf/org-mode-config.el")
+
 
 ;; PERSONAL PREFERENCES
 
 ;; look and feel preferences
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
-;; Securing el-get availability
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
-
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
 
 
 ;; Multiple cursors keybindings
@@ -32,28 +23,9 @@
 ;; Expand Regions
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-;; Org-Mode TO-DOs you fancy?
-;; for org mode todo ease, makes parent status depend on the childrens status
-(defun org-summary-todo (n-done n-not-done)
-  "Switch entry to DONE when all subentries are done, to TODO otherwise."
-  (let (org-log-done org-log-states)   ; turn off logging
-    (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
-
-(add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
-
-;; adding new statuses to org mode
-(setq org-todo-keywords
-       '((sequence "TODO" "IN-PROGRESS" "FEEDBACK" "|" "DONE" "GOOD-ENOUGH")))
-
-;; babel code-blocks
-;; active Babel languages
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((sql . t)))
-
 ;; Auto complete
 ;; Company mode
-(company-mode)
+
 ;;(ac-config-default) ;; auto-complete
 
 ;; Beyond this point emacs will do silly stuff by itself ;)
@@ -74,6 +46,7 @@
  '(fringe-mode 0 nil (fringe))
  '(helm-mode t)
  '(helm-projectile nil)
+ '(company-mode)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map

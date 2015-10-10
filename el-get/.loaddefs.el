@@ -3,6 +3,54 @@
 ;;; Code:
 
 
+;;;### (autoloads nil "auto-complete/auto-complete" "auto-complete/auto-complete.el"
+;;;;;;  (22041 24891 0 0))
+;;; Generated autoloads from auto-complete/auto-complete.el
+
+(autoload 'auto-complete "auto-complete/auto-complete" "\
+Start auto-completion at current point.
+
+\(fn &optional SOURCES)" t nil)
+
+(autoload 'auto-complete-mode "auto-complete/auto-complete" "\
+AutoComplete mode
+
+\(fn &optional ARG)" t nil)
+
+(defvar global-auto-complete-mode nil "\
+Non-nil if Global-Auto-Complete mode is enabled.
+See the command `global-auto-complete-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-auto-complete-mode'.")
+
+(custom-autoload 'global-auto-complete-mode "auto-complete/auto-complete" nil)
+
+(autoload 'global-auto-complete-mode "auto-complete/auto-complete" "\
+Toggle Auto-Complete mode in all buffers.
+With prefix ARG, enable Global-Auto-Complete mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
+
+Auto-Complete mode is enabled in all buffers where
+`auto-complete-mode-maybe' would do it.
+See `auto-complete-mode' for more information on Auto-Complete mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "auto-complete/auto-complete-config" "auto-complete/auto-complete-config.el"
+;;;;;;  (22041 24891 0 0))
+;;; Generated autoloads from auto-complete/auto-complete-config.el
+
+(autoload 'ac-config-default "auto-complete/auto-complete-config" "\
+
+
+\(fn)" nil nil)
+
+;;;***
+
 ;;;### (autoloads nil "color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow"
 ;;;;;;  "color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow.el"
 ;;;;;;  (22040 10443 0 0))
@@ -1083,6 +1131,53 @@ A mode for creating a rectangular region to edit
 
 ;;;***
 
+;;;### (autoloads nil "php-mode-improved/php-mode-improved" "php-mode-improved/php-mode-improved.el"
+;;;;;;  (22041 25911 0 0))
+;;; Generated autoloads from php-mode-improved/php-mode-improved.el
+
+(defvar php-mode-to-use (progn (require 'mumamo nil t) (if (fboundp 'nxhtml-mumamo-turn-on) 'nxhtml-mumamo-turn-on (if (fboundp 'html-mumamo-turn-on) 'html-mumamo-turn-on 'php-mode))) "\
+Major mode turn on function to use for php files.")
+
+(custom-autoload 'php-mode-to-use "php-mode-improved/php-mode-improved" t)
+
+(defvar php-file-patterns '("\\.php[s34]?\\'" "\\.phtml\\'" "\\.inc\\'") "\
+List of file patterns for which to automatically invoke `php-mode'.")
+
+(custom-autoload 'php-file-patterns "php-mode-improved/php-mode-improved" nil)
+
+(autoload 'php-mode "php-mode-improved/php-mode-improved" "\
+Major mode for editing PHP code.
+
+\\{php-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "php-mode/php-mode" "php-mode/php-mode.el"
+;;;;;;  (22041 24834 0 0))
+;;; Generated autoloads from php-mode/php-mode.el
+
+(let ((loads (get 'php 'custom-loads))) (if (member '"php-mode/php-mode" loads) nil (put 'php 'custom-loads (cons '"php-mode/php-mode" loads))))
+
+(defvar php-extra-constants 'nil "\
+A list of additional strings to treat as PHP constants.")
+
+(custom-autoload 'php-extra-constants "php-mode/php-mode" nil)
+
+(add-to-list 'interpreter-mode-alist (cons "php" 'php-mode))
+
+(autoload 'php-mode "php-mode/php-mode" "\
+Major mode for editing PHP code.
+
+\\{php-mode-map}
+
+\(fn)" t nil)
+
+(dolist (pattern '("\\.php[s345t]?\\'" "\\.phtml\\'" "Amkfile" "\\.amk$")) (add-to-list 'auto-mode-alist `(,pattern . php-mode) t))
+
+;;;***
+
 ;;;### (autoloads nil "pkg-info/pkg-info" "pkg-info/pkg-info.el"
 ;;;;;;  (22040 10989 0 0))
 ;;; Generated autoloads from pkg-info/pkg-info.el
@@ -1528,7 +1623,73 @@ Major mode for editing web templates.
 
 ;;;***
 
-;;;### (autoloads nil nil ("color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow-pkg.el"
+;;;### (autoloads nil "xcscope/xcscope" "xcscope/xcscope.el" (22041
+;;;;;;  24871 0 0))
+;;; Generated autoloads from xcscope/xcscope.el
+
+(autoload 'cscope-minor-mode "xcscope/xcscope" "\
+This cscope minor mode maps cscope keybindings to make cscope
+functions more accessible.
+
+Key bindings:
+\\{cscope-minor-mode-keymap}
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'cscope-setup "xcscope/xcscope" "\
+Automatically turns on cscope-minor-mode when editing C and
+C++ sources
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "yasnippet/yasnippet" "yasnippet/yasnippet.el"
+;;;;;;  (22041 24853 0 0))
+;;; Generated autoloads from yasnippet/yasnippet.el
+
+(autoload 'yas-minor-mode "yasnippet/yasnippet" "\
+Toggle YASnippet mode.
+
+When YASnippet mode is enabled, `yas-expand', normally bound to
+the TAB key, expands snippets of code depending on the major
+mode.
+
+With no argument, this command toggles the mode.
+positive prefix argument turns on the mode.
+Negative prefix argument turns off the mode.
+
+Key bindings:
+\\{yas-minor-mode-map}
+
+\(fn &optional ARG)" t nil)
+
+(defvar yas-global-mode nil "\
+Non-nil if Yas-Global mode is enabled.
+See the command `yas-global-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `yas-global-mode'.")
+
+(custom-autoload 'yas-global-mode "yasnippet/yasnippet" nil)
+
+(autoload 'yas-global-mode "yasnippet/yasnippet" "\
+Toggle Yas minor mode in all buffers.
+With prefix ARG, enable Yas-Global mode if ARG is positive;
+otherwise, disable it.  If called from Lisp, enable the mode if
+ARG is omitted or nil.
+
+Yas minor mode is enabled in all buffers where
+`yas-minor-mode-on' would do it.
+See `yas-minor-mode' for more information on Yas minor mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil nil ("ac-php/ac-php-comm-tags-data.el" "ac-php/ac-php-remake-tags-bat.el"
+;;;;;;  "ac-php/ac-php-remake-tags-without-cscope-bat.el" "ac-php/ac-php.el"
+;;;;;;  "auto-complete/auto-complete-pkg.el" "color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow-pkg.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-blue-theme.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-bright-theme.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-day-theme.el"
@@ -1542,25 +1703,27 @@ Major mode for editing web templates.
 ;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
 ;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
 ;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
-;;;;;;  "el-get/el-get-status.el" "epl/epl.el" "expand-region/cc-mode-expansions.el"
-;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
-;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
-;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
-;;;;;;  "expand-region/expand-region-core.el" "expand-region/expand-region-pkg.el"
-;;;;;;  "expand-region/feature-mode-expansions.el" "expand-region/html-mode-expansions.el"
-;;;;;;  "expand-region/js-mode-expansions.el" "expand-region/js2-mode-expansions.el"
-;;;;;;  "expand-region/jsp-expansions.el" "expand-region/latex-mode-expansions.el"
-;;;;;;  "expand-region/nxml-mode-expansions.el" "expand-region/octave-expansions.el"
-;;;;;;  "expand-region/python-el-expansions.el" "expand-region/python-el-fgallina-expansions.el"
-;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
-;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/subword-mode-expansions.el"
-;;;;;;  "expand-region/text-mode-expansions.el" "expand-region/the-org-mode-expansions.el"
-;;;;;;  "expand-region/web-mode-expansions.el" "f/f.el" "moe-theme/moe-dark-theme.el"
-;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
-;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
-;;;;;;  "multiple-cursors/mc-cycle-cursors.el" "multiple-cursors/multiple-cursors-pkg.el"
-;;;;;;  "multiple-cursors/multiple-cursors.el" "s/s.el" "zenburn/zenburn.el")
-;;;;;;  (22040 36819 973502 0))
+;;;;;;  "el-get/el-get-status.el" "emacs-powerline/powerline.el"
+;;;;;;  "epl/epl.el" "expand-region/cc-mode-expansions.el" "expand-region/clojure-mode-expansions.el"
+;;;;;;  "expand-region/cperl-mode-expansions.el" "expand-region/css-mode-expansions.el"
+;;;;;;  "expand-region/enh-ruby-mode-expansions.el" "expand-region/er-basic-expansions.el"
+;;;;;;  "expand-region/erlang-mode-expansions.el" "expand-region/expand-region-core.el"
+;;;;;;  "expand-region/expand-region-pkg.el" "expand-region/feature-mode-expansions.el"
+;;;;;;  "expand-region/html-mode-expansions.el" "expand-region/js-mode-expansions.el"
+;;;;;;  "expand-region/js2-mode-expansions.el" "expand-region/jsp-expansions.el"
+;;;;;;  "expand-region/latex-mode-expansions.el" "expand-region/nxml-mode-expansions.el"
+;;;;;;  "expand-region/octave-expansions.el" "expand-region/python-el-expansions.el"
+;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
+;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/sml-mode-expansions.el"
+;;;;;;  "expand-region/subword-mode-expansions.el" "expand-region/text-mode-expansions.el"
+;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
+;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "moe-theme/moe-dark-theme.el" "moe-theme/moe-light-theme.el"
+;;;;;;  "moe-theme/moe-theme-pkg.el" "moe-theme/moe-theme-switcher.el"
+;;;;;;  "moe-theme/moe-theme.el" "multiple-cursors/mc-cycle-cursors.el"
+;;;;;;  "multiple-cursors/multiple-cursors-pkg.el" "multiple-cursors/multiple-cursors.el"
+;;;;;;  "php-mode/php-mode-test.el" "popup/popup.el" "s/s.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el" "zenburn/zenburn.el") (22041
+;;;;;;  25912 20550 0))
 
 ;;;***
 

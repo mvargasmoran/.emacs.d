@@ -3,7 +3,10 @@
 (load "~/.emacs.d/user-conf/helm-mode-config.el")
 
 ;; PERSONAL PREFERENCES
+
+;; look and feel preferences
 (tool-bar-mode -1)
+(scroll-bar-mode -1)
 
 ;; Securing el-get availability
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
@@ -63,18 +66,22 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#cccccc" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#66cccc" "#2d2d2d"))
- '(custom-enabled-themes (quote (sanityinc-tomorrow-blue)))
+ '(custom-enabled-themes (quote (moe-dark)))
  '(custom-safe-themes
    (quote
-    ("82d2cac368ccdec2fcc7573f24c3f79654b78bf133096f9b40c20d97ec1d8016" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "8e5dd88c42089566d5f8e1a23d3017c213eeccd94a7b9e1a58a2dc3e08cb26d5" "be9dc1d3e2b84923530294ee74fba00ef7fe815f1e52ef2aec67ac40965a735a" "74278d14b7d5cf691c4d846a4bbf6e62d32104986f104c1e61f718f9669ec04b" default)))
+    ("8e5dd88c42089566d5f8e1a23d3017c213eeccd94a7b9e1a58a2dc3e08cb26d5" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
  '(fci-rule-color "#515151")
+ '(fringe-mode 0 nil (fringe))
  '(helm-mode t)
+ '(helm-projectile nil)
+ '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
     ((20 . "#f2777a")
      (40 . "#f99157")
      (60 . "#ffcc66")
+     <
      (80 . "#99cc99")
      (100 . "#66cccc")
      (120 . "#6699cc")

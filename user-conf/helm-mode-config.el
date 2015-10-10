@@ -2,7 +2,7 @@
 ;;(require 'helm-config)
 
 
-(global-set-key (kbd "C-c hw") 'helm-M-x)
+(global-set-key (kbd "C-c h") 'helm-M-x)
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
@@ -24,3 +24,6 @@
       helm-ff-file-name-history-use-recentf t)
 
 ;;(helm-mode 1)
+;; Projectile Keybndings yes, I don't need all
+(global-set-key (kbd "C-c p") 'helm-projectile-find-file-dwim)
+(global-set-key (kbd "C-c d") 'helm-projectile-find-dir)

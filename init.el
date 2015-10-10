@@ -1,10 +1,8 @@
 ;; User configurations files
-(load "~/.emacs.d/user-conf/el-get-config.el") ;; first things first
-
-(load "~/.emacs.d/user-conf/web-mode-config.el")
-(load "~/.emacs.d/user-conf/helm-mode-config.el")
-(load "~/.emacs.d/user-conf/org-mode-config.el")
-
+;; first let's load a loader ;)
+(load "~/.emacs.d/loader.el")
+;; then load a dir o stuff
+(load-directory "~/.emacs.d/user-conf")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -32,20 +30,6 @@
 ;; Expand Regions
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-
-;; Neotree stuff
-(defun neotree-ffip-project-dir ()
-    "Open NeoTree using the git root."
-    (interactive)
-    (let ((project-dir (ffip-project-root))
-          (file-name (buffer-file-name)))
-      (if project-dir
-          (progn
-            (neotree-dir project-dir)
-            (neotree-find file-name))
-        (message "Could not find git project root."))))
-  
-  (global-set-key (kbd "C-c C-p") 'neotree-ffip-project-dir)
 
 ;; Auto complete
 ;; Company mode

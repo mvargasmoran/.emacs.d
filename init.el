@@ -4,37 +4,7 @@
 ;; then load a dir o stuff
 (load-directory "~/.emacs.d/user-conf")
 
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120))))
-
-(setq-default tab-width 4)
-
-;; PERSONAL PREFERENCES
-
-;; look and feel preferences
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(global-set-key [f8] 'neotree-toggle)
-
-;; Multiple cursors keybindings
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-
-;; Expand Regions
-(global-set-key (kbd "C-=") 'er/expand-region)
-
-
-;; Auto complete
-;; Company mode
-
-;;(ac-config-default) ;; auto-complete
+(ac-config-default) ;; auto-complete
 
 ;; Beyond this point emacs will do silly stuff by itself ;)
 (custom-set-variables

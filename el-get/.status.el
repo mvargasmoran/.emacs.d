@@ -72,6 +72,8 @@
 		(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (git-gutter status "installed" recipe
 			 (:name git-gutter :description "Emacs port of GitGutter Sublime Text 2 Plugin" :website "https://github.com/syohex/emacs-git-gutter" :type github :pkgname "syohex/emacs-git-gutter"))
+ (haml-mode status "installed" recipe
+			(:name haml-mode :description "Major mode for editing Haml files" :type github :pkgname "nex3/haml-mode"))
  (helm status "installed" recipe
 	   (:name helm :description "Emacs incremental and narrowing framework" :type github :pkgname "emacs-helm/helm" :autoloads "helm-autoloads" :build
 			  (("make"))
@@ -85,6 +87,8 @@
 				   (backup-inhibited t))
 			  (update-directory-autoloads default-directory)
 			  nil)))
+(jshint-mode status "installed" recipe
+(:name jshint-mode :website "https://github.com/daleharvey/jshint-mode" :description "Integrate JSHint into Emacs via a node.js server. JSHint (http://www.jshint.com/) is a static code analysis tool for JavaScript." :type github :pkgname "daleharvey/jshint-mode"))
 (moe-theme status "installed" recipe
 (:name moe-theme :description "A customizable colorful eye-candy theme for Emacser. Moe, moe, kyun!" :website "https://github.com/kuanyui/moe-theme.el" :type github :pkgname "kuanyui/moe-theme.el" :prepare
 (add-to-list 'custom-theme-load-path default-directory)))
@@ -106,6 +110,12 @@
 (dash s f pkg-info)))
 (s status "installed" recipe
 (:name s :description "The long lost Emacs string manipulation library." :type github :pkgname "magnars/s.el"))
+(sass-mode status "installed" recipe
+(:name sass-mode :description "Major mode for editing Sass files" :type github :pkgname "nex3/sass-mode" :depends haml-mode :prepare
+(add-to-list 'auto-mode-alist
+'("\\.scss$" . sass-mode))))
+(scss-mode status "installed" recipe
+(:name scss-mode :description "Major mode for editing SCSS files(http://sass-lang.com)" :type github :pkgname "antonj/scss-mode" :features scss-mode))
 (web-mode status "installed" recipe
 (:name web-mode :description "emacs major mode for editing PHP/JSP/ASP HTML templates (with embedded CSS and JS blocks)" :type github :pkgname "fxbois/web-mode"))
 (xcscope status "installed" recipe
@@ -117,5 +127,8 @@
 (yasnippet status "installed" recipe
 (:name yasnippet :website "https://github.com/capitaomorte/yasnippet.git" :description "YASnippet is a template system for Emacs." :type github :pkgname "capitaomorte/yasnippet" :compile "yasnippet.el" :submodule nil :build
 (("git" "submodule" "update" "--init" "--" "snippets"))))
+(yasnippets status "installed" recipe
+(:name yasnippets :description "Comprehensive collection of yasnippets" :type github :pkgname "rejeep/yasnippets" :depends
+(yasnippet)))
 (zenburn status "installed" recipe
 (:name zenburn :auto-generated t :type emacswiki :description "" :website "https://raw.github.com/emacsmirror/emacswiki.org/master/zenburn.el")))

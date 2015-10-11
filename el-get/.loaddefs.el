@@ -946,6 +946,21 @@ Update git-gutter informations for all visible buffers.
 
 ;;;***
 
+;;;### (autoloads nil "haml-mode/haml-mode" "haml-mode/haml-mode.el"
+;;;;;;  (22041 38788 0 0))
+;;; Generated autoloads from haml-mode/haml-mode.el
+
+(autoload 'haml-mode "haml-mode/haml-mode" "\
+Major mode for editing Haml files.
+
+\\{haml-mode-map}
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.haml\\'" . haml-mode))
+
+;;;***
+
 ;;;### (autoloads nil "multiple-cursors/mc-edit-lines" "multiple-cursors/mc-edit-lines.el"
 ;;;;;;  (22039 14606 0 0))
 ;;; Generated autoloads from multiple-cursors/mc-edit-lines.el
@@ -1710,6 +1725,36 @@ See `projectile-mode' for more information on Projectile mode.
 
 ;;;***
 
+;;;### (autoloads nil "sass-mode/sass-mode" "sass-mode/sass-mode.el"
+;;;;;;  (22041 38826 0 0))
+;;; Generated autoloads from sass-mode/sass-mode.el
+
+(autoload 'sass-mode "sass-mode/sass-mode" "\
+Major mode for editing Sass files.
+
+\\{sass-mode-map}
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
+
+;;;***
+
+;;;### (autoloads nil "scss-mode/scss-mode" "scss-mode/scss-mode.el"
+;;;;;;  (22041 38849 0 0))
+;;; Generated autoloads from scss-mode/scss-mode.el
+
+(autoload 'scss-mode "scss-mode/scss-mode" "\
+Major mode for editing SCSS files, http://sass-lang.com/
+Special commands:
+\\{scss-mode-map}
+
+\(fn)" t nil)
+
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
+;;;***
+
 ;;;### (autoloads nil "web-mode/web-mode" "web-mode/web-mode.el"
 ;;;;;;  (22040 7273 0 0))
 ;;; Generated autoloads from web-mode/web-mode.el
@@ -1815,13 +1860,15 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/sml-mode-expansions.el"
 ;;;;;;  "expand-region/subword-mode-expansions.el" "expand-region/text-mode-expansions.el"
 ;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
-;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "moe-theme/moe-dark-theme.el" "moe-theme/moe-light-theme.el"
-;;;;;;  "moe-theme/moe-theme-pkg.el" "moe-theme/moe-theme-switcher.el"
-;;;;;;  "moe-theme/moe-theme.el" "multiple-cursors/mc-cycle-cursors.el"
-;;;;;;  "multiple-cursors/multiple-cursors-pkg.el" "multiple-cursors/multiple-cursors.el"
-;;;;;;  "php-mode/php-mode-test.el" "popup/popup.el" "s/s.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el" "zenburn/zenburn.el") (22041
-;;;;;;  36235 274671 0))
+;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "jshint-mode/flymake-jshint.el"
+;;;;;;  "jshint-mode/jshint-mode-pkg.el" "moe-theme/moe-dark-theme.el"
+;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
+;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
+;;;;;;  "multiple-cursors/mc-cycle-cursors.el" "multiple-cursors/multiple-cursors-pkg.el"
+;;;;;;  "multiple-cursors/multiple-cursors.el" "php-mode/php-mode-test.el"
+;;;;;;  "popup/popup.el" "s/s.el" "yasnippet/yasnippet-debug.el"
+;;;;;;  "yasnippet/yasnippet-tests.el" "yasnippets/yasnippets.el"
+;;;;;;  "zenburn/zenburn.el") (22041 42198 827536 0))
 
 ;;;***
 

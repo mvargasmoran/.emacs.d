@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Code/lglike/")
+("~/.emacs.d/" "~/Code/lglike/" "~/www/node-sites/sails/tankoubon/" "~/www/angular/img-crawler/")

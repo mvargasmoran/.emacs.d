@@ -1,12 +1,18 @@
 ;; web-mode
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+;; PHP bunch
 (add-to-list 'auto-mode-alist '("\\.php\\'" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.blade\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+
+;; Html
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+;; Laravel
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")
+        ("blade"  . "\\.blade\\."))
+	  )
+
+;; JS, Sails, Angular
+(add-to-list 'auto-mode-alist '("\\.ejs\\'" . web-mode))

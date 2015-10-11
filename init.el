@@ -4,6 +4,8 @@
 ;; then load a dir o stuff
 (load-directory "~/.emacs.d/user-conf")
 
+
+(yas-global-mode 1)
 (ac-config-default) ;; auto-complete
 
 ;; Beyond this point emacs will do silly stuff by itself ;)

@@ -87,6 +87,9 @@
 				   (backup-inhibited t))
 			  (update-directory-autoloads default-directory)
 			  nil)))
+(js3-mode status "installed" recipe
+(:name js3-mode :website "https://github.com/thomblake/js3-mode#readme" :description "A chimeric fork of js2-mode and js-mode" :type github :pkgname "thomblake/js3-mode" :prepare
+(autoload 'js3-mode "js3" nil t)))
 (jshint-mode status "installed" recipe
 (:name jshint-mode :website "https://github.com/daleharvey/jshint-mode" :description "Integrate JSHint into Emacs via a node.js server. JSHint (http://www.jshint.com/) is a static code analysis tool for JavaScript." :type github :pkgname "daleharvey/jshint-mode"))
 (moe-theme status "installed" recipe
@@ -127,8 +130,5 @@
 (yasnippet status "installed" recipe
 (:name yasnippet :website "https://github.com/capitaomorte/yasnippet.git" :description "YASnippet is a template system for Emacs." :type github :pkgname "capitaomorte/yasnippet" :compile "yasnippet.el" :submodule nil :build
 (("git" "submodule" "update" "--init" "--" "snippets"))))
-(yasnippets status "installed" recipe
-(:name yasnippets :description "Comprehensive collection of yasnippets" :type github :pkgname "rejeep/yasnippets" :depends
-(yasnippet)))
 (zenburn status "installed" recipe
 (:name zenburn :auto-generated t :type emacswiki :description "" :website "https://raw.github.com/emacsmirror/emacswiki.org/master/zenburn.el")))

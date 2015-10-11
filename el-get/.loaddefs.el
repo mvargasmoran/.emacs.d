@@ -961,6 +961,34 @@ Major mode for editing Haml files.
 
 ;;;***
 
+;;;### (autoloads nil "js3-mode/js3" "js3-mode/js3.el" (22042 40595
+;;;;;;  0 0))
+;;; Generated autoloads from js3-mode/js3.el
+ (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+(autoload 'js3-mode "js3-mode/js3" "\
+Major mode for editing JavaScript code.
+
+\\{js3-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "js3-mode/js3-mode" "js3-mode/js3-mode.el"
+;;;;;;  (22042 40595 0 0))
+;;; Generated autoloads from js3-mode/js3-mode.el
+ (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+(autoload 'js3-mode "js3-mode/js3-mode" "\
+Major mode for editing JavaScript code.
+
+\\{js3-mode-map}
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "multiple-cursors/mc-edit-lines" "multiple-cursors/mc-edit-lines.el"
 ;;;;;;  (22039 14606 0 0))
 ;;; Generated autoloads from multiple-cursors/mc-edit-lines.el
@@ -1868,7 +1896,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "multiple-cursors/multiple-cursors.el" "php-mode/php-mode-test.el"
 ;;;;;;  "popup/popup.el" "s/s.el" "yasnippet/yasnippet-debug.el"
 ;;;;;;  "yasnippet/yasnippet-tests.el" "yasnippets/yasnippets.el"
-;;;;;;  "zenburn/zenburn.el") (22041 42198 827536 0))
+;;;;;;  "zenburn/zenburn.el") (22042 40601 816823 0))
 
 ;;;***
 

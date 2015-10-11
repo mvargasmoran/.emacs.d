@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("enubis"
+(("projectile-bookmarks.eld"
+ (filename . "~/.emacs.d/projectile-bookmarks.eld")
+ (front-context-string . "(\"~/.emacs.d/\" \"")
+ (rear-context-string)
+ (position . 1))
+("enubis"
  (filename . "~/Code/enubis/")
  (front-context-string . ".DS_Store\n  -rw-")
  (rear-context-string . "48 Oct  9 23:22 ")

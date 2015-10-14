@@ -3,6 +3,41 @@
 ;;; Code:
 
 
+;;;### (autoloads nil "ac-js2/ac-js2" "ac-js2/ac-js2.el" (22043 27112
+;;;;;;  0 0))
+;;; Generated autoloads from ac-js2/ac-js2.el
+
+(autoload 'ac-js2-expand-function "ac-js2/ac-js2" "\
+Expand the function definition left of point.
+Expansion will only occur for candidates whose documentation
+string contain a function prototype.
+
+\(fn)" t nil)
+
+(autoload 'ac-js2-completion-function "ac-js2/ac-js2" "\
+Function for `completions-at-point'.
+
+\(fn)" nil nil)
+
+(autoload 'ac-js2-company "ac-js2/ac-js2" "\
+
+
+\(fn COMMAND &optional ARG &rest IGNORED)" t nil)
+
+(autoload 'ac-js2-jump-to-definition "ac-js2/ac-js2" "\
+Jump to the definition of an object's property, variable or function.
+Navigation to a property definend in an Object literal isn't
+implemented.
+
+\(fn)" t nil)
+
+(autoload 'ac-js2-mode "ac-js2/ac-js2" "\
+A minor mode that provides auto-completion and navigation for Js2-mode.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "auto-complete/auto-complete" "auto-complete/auto-complete.el"
 ;;;;;;  (22041 24891 0 0))
 ;;; Generated autoloads from auto-complete/auto-complete.el
@@ -961,6 +996,46 @@ Major mode for editing Haml files.
 
 ;;;***
 
+;;;### (autoloads nil "js2-mode/js2-imenu-extras" "js2-mode/js2-imenu-extras.el"
+;;;;;;  (22043 27097 0 0))
+;;; Generated autoloads from js2-mode/js2-imenu-extras.el
+
+(autoload 'js2-imenu-extras-setup "js2-mode/js2-imenu-extras" "\
+
+
+\(fn)" nil nil)
+
+(autoload 'js2-imenu-extras-mode "js2-mode/js2-imenu-extras" "\
+Toggle Imenu support for frameworks and structural patterns.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "js2-mode/js2-mode" "js2-mode/js2-mode.el"
+;;;;;;  (22043 27097 0 0))
+;;; Generated autoloads from js2-mode/js2-mode.el
+
+(autoload 'js2-highlight-unused-variables-mode "js2-mode/js2-mode" "\
+Toggle highlight of unused variables.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'js2-minor-mode "js2-mode/js2-mode" "\
+Minor mode for running js2 as a background linter.
+This allows you to use a different major mode for JavaScript editing,
+such as `js-mode', while retaining the asynchronous error/warning
+highlighting features of `js2-mode'.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'js2-mode "js2-mode/js2-mode" "\
+Major mode for editing JavaScript code.
+
+\(fn)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "js3-mode/js3" "js3-mode/js3.el" (22042 40595
 ;;;;;;  0 0))
 ;;; Generated autoloads from js3-mode/js3.el
@@ -1783,6 +1858,123 @@ Special commands:
 
 ;;;***
 
+;;;### (autoloads nil "simple-httpd/simple-httpd" "simple-httpd/simple-httpd.el"
+;;;;;;  (22043 27104 0 0))
+;;; Generated autoloads from simple-httpd/simple-httpd.el
+
+(autoload 'httpd-start "simple-httpd/simple-httpd" "\
+Start the web server process. If the server is already
+running, this will restart the server. There is only one server
+instance per Emacs instance.
+
+\(fn)" t nil)
+
+(autoload 'httpd-stop "simple-httpd/simple-httpd" "\
+Stop the web server if it is currently running, otherwise do nothing.
+
+\(fn)" t nil)
+
+(autoload 'httpd-serve-directory "simple-httpd/simple-httpd" "\
+Start the web server with given `directory' as `httpd-root'.
+
+\(fn DIRECTORY)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-bower" "skewer-mode/skewer-bower.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-bower.el
+
+(autoload 'skewer-bower-refresh "skewer-mode/skewer-bower" "\
+Update the package listing and packages synchronously.
+
+\(fn)" t nil)
+
+(autoload 'skewer-bower-load "skewer-mode/skewer-bower" "\
+Dynamically load a library from bower into the current page.
+
+\(fn PACKAGE &optional VERSION)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-css" "skewer-mode/skewer-css.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-css.el
+
+(autoload 'skewer-css-mode "skewer-mode/skewer-css" "\
+Minor mode for interactively loading new CSS rules.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-html" "skewer-mode/skewer-html.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-html.el
+
+(autoload 'skewer-html-mode "skewer-mode/skewer-html" "\
+Minor mode for interactively loading new HTML.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-mode" "skewer-mode/skewer-mode.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-mode.el
+
+(autoload 'list-skewer-clients "skewer-mode/skewer-mode" "\
+List the attached browsers in a buffer.
+
+\(fn)" t nil)
+
+(autoload 'skewer-mode "skewer-mode/skewer-mode" "\
+Minor mode for interacting with a browser.
+
+\(fn &optional ARG)" t nil)
+
+(autoload 'run-skewer "skewer-mode/skewer-mode" "\
+Attach a browser to Emacs for a skewer JavaScript REPL. Uses
+`browse-url' to launch a browser.
+
+\(fn)" t nil)
+
+(autoload 'skewer-run-phantomjs "skewer-mode/skewer-mode" "\
+Connect an inferior PhantomJS process to Skewer, returning the process.
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-repl" "skewer-mode/skewer-repl.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-repl.el
+
+(autoload 'skewer-repl--response-hook "skewer-mode/skewer-repl" "\
+Catches all browser messages logging some to the REPL.
+
+\(fn RESPONSE)" nil nil)
+
+(autoload 'skewer-repl "skewer-mode/skewer-repl" "\
+Start a JavaScript REPL to be evaluated in the visiting browser.
+
+\(fn)" t nil)
+
+(eval-after-load 'skewer-mode '(progn (add-hook 'skewer-response-hook #'skewer-repl--response-hook) (add-hook 'skewer-repl-mode-hook #'skewer-repl-mode-compilation-shell-hook) (define-key skewer-mode-map (kbd "C-c C-z") #'skewer-repl)))
+
+;;;***
+
+;;;### (autoloads nil "skewer-mode/skewer-setup" "skewer-mode/skewer-setup.el"
+;;;;;;  (22043 27108 0 0))
+;;; Generated autoloads from skewer-mode/skewer-setup.el
+
+(autoload 'skewer-setup "skewer-mode/skewer-setup" "\
+Fully integrate Skewer into js2-mode, css-mode, and html-mode buffers.
+
+\(fn)" nil nil)
+
+;;;***
+
 ;;;### (autoloads nil "web-mode/web-mode" "web-mode/web-mode.el"
 ;;;;;;  (22040 7273 0 0))
 ;;; Generated autoloads from web-mode/web-mode.el
@@ -1816,7 +2008,7 @@ C++ sources
 ;;;***
 
 ;;;### (autoloads nil "yasnippet/yasnippet" "yasnippet/yasnippet.el"
-;;;;;;  (22041 24853 0 0))
+;;;;;;  (22043 26811 0 0))
 ;;; Generated autoloads from yasnippet/yasnippet.el
 
 (autoload 'yas-minor-mode "yasnippet/yasnippet" "\
@@ -1858,9 +2050,9 @@ See `yas-minor-mode' for more information on Yas minor mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("ac-php/ac-php-comm-tags-data.el" "ac-php/ac-php-remake-tags-bat.el"
-;;;;;;  "ac-php/ac-php-remake-tags-without-cscope-bat.el" "ac-php/ac-php.el"
-;;;;;;  "auto-complete/auto-complete-pkg.el" "color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow-pkg.el"
+;;;### (autoloads nil nil ("ac-js2/ac-js2-tests.el" "ac-php/ac-php-comm-tags-data.el"
+;;;;;;  "ac-php/ac-php-remake-tags-bat.el" "ac-php/ac-php-remake-tags-without-cscope-bat.el"
+;;;;;;  "ac-php/ac-php.el" "auto-complete/auto-complete-pkg.el" "color-theme-sanityinc-tomorrow/color-theme-sanityinc-tomorrow-pkg.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-blue-theme.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-bright-theme.el"
 ;;;;;;  "color-theme-sanityinc-tomorrow/sanityinc-tomorrow-day-theme.el"
@@ -1888,15 +2080,16 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/sml-mode-expansions.el"
 ;;;;;;  "expand-region/subword-mode-expansions.el" "expand-region/text-mode-expansions.el"
 ;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
-;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "jshint-mode/flymake-jshint.el"
+;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "js2-mode/js2-old-indent.el" "jshint-mode/flymake-jshint.el"
 ;;;;;;  "jshint-mode/jshint-mode-pkg.el" "moe-theme/moe-dark-theme.el"
 ;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
 ;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
 ;;;;;;  "multiple-cursors/mc-cycle-cursors.el" "multiple-cursors/multiple-cursors-pkg.el"
 ;;;;;;  "multiple-cursors/multiple-cursors.el" "php-mode/php-mode-test.el"
-;;;;;;  "popup/popup.el" "s/s.el" "yasnippet/yasnippet-debug.el"
-;;;;;;  "yasnippet/yasnippet-tests.el" "yasnippets/yasnippets.el"
-;;;;;;  "zenburn/zenburn.el") (22042 40601 816823 0))
+;;;;;;  "popup/popup.el" "s/s.el" "simple-httpd/simple-httpd-test.el"
+;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
+;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el"
+;;;;;;  "zenburn/zenburn.el") (22043 27113 254004 0))
 
 ;;;***
 

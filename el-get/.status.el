@@ -1,4 +1,7 @@
-((ac-php status "installed" recipe
+((ac-js2 status "installed" recipe
+		 (:name ac-js2 :description "An attempt at context sensitive auto-completion for Javascript" :type github :pkgname "ScottyB/ac-js2" :depends
+				(skewer-mode auto-complete)))
+ (ac-php status "installed" recipe
 		 (:name ac-php :description "Auto complete source for php" :type github :pkgname "xcwen/ac-php" :depends
 				(php-mode auto-complete yasnippet xcscope f s)))
  (auto-complete status "installed" recipe
@@ -87,6 +90,9 @@
 				   (backup-inhibited t))
 			  (update-directory-autoloads default-directory)
 			  nil)))
+(js2-mode status "installed" recipe
+(:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare
+(autoload 'js2-mode "js2-mode" nil t)))
 (js3-mode status "installed" recipe
 (:name js3-mode :website "https://github.com/thomblake/js3-mode#readme" :description "A chimeric fork of js2-mode and js-mode" :type github :pkgname "thomblake/js3-mode" :prepare
 (autoload 'js3-mode "js3" nil t)))
@@ -119,6 +125,13 @@
 '("\\.scss$" . sass-mode))))
 (scss-mode status "installed" recipe
 (:name scss-mode :description "Major mode for editing SCSS files(http://sass-lang.com)" :type github :pkgname "antonj/scss-mode" :features scss-mode))
+(simple-httpd status "installed" recipe
+(:name simple-httpd :description "A simple Emacs web server" :type github :pkgname "skeeto/emacs-http-server"))
+(skewer-mode status "installed" recipe
+(:name skewer-mode :description "Provides live interaction with JavaScript, CSS, and HTML in a web browser" :type github :pkgname "skeeto/skewer-mode" :depends
+(js2-mode simple-httpd)
+:features skewer-setup :post-init
+(skewer-setup)))
 (web-mode status "installed" recipe
 (:name web-mode :description "emacs major mode for editing PHP/JSP/ASP HTML templates (with embedded CSS and JS blocks)" :type github :pkgname "fxbois/web-mode"))
 (xcscope status "installed" recipe

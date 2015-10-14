@@ -2,7 +2,27 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("projectile-bookmarks.eld"
+(("workers-code"
+ (filename . "~/www/Exploring/workers/app.js")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("workers"
+ (filename . "~/www/Exploring/workers/index.html")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("index.html"
+ (filename . "~/www/Exploring/workers/index.html")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("series.ejs"
+ (filename . "~/www/node-sites/sails/tankoubon/views/series.ejs")
+ (front-context-string . "\n<% if (typeof e")
+ (rear-context-string . "\n<br> <br> <br>\n")
+ (position . 113))
+("projectile-bookmarks.eld"
  (filename . "~/.emacs.d/projectile-bookmarks.eld")
  (front-context-string . "(\"~/.emacs.d/\" \"")
  (rear-context-string)

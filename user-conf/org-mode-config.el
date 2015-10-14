@@ -9,7 +9,14 @@
 
 ;; adding new statuses to org mode
 (setq org-todo-keywords
-       '((sequence "TODO" "IN-PROGRESS" "FEEDBACK" "|" "DONE" "GOOD-ENOUGH")))
+	  '((sequence "TODO" "IN-PROGRESS" "FEEDBACK" "|" "DONE" "GOOD-ENOUGH" "|" "QA-UAT")))
+
+(setq org-todo-keyword-faces
+	  '(
+		("TODO" . org-warning)
+		("IN-PROGRESS" . (:background "Gold" :foreground "LightYellow"))
+		("QA-UAT" . (:background "lightskyblue" :foreground "midnightblue"  :weight bold))
+		))
 
 ;; babel code-blocks
 ;; active Babel languages

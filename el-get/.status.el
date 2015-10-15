@@ -1,95 +1,95 @@
 ((ac-js2 status "installed" recipe
-	 (:name ac-js2 :description "An attempt at context sensitive auto-completion for Javascript" :type github :pkgname "ScottyB/ac-js2" :depends
-		(skewer-mode auto-complete)))
+		 (:name ac-js2 :description "An attempt at context sensitive auto-completion for Javascript" :type github :pkgname "ScottyB/ac-js2" :depends
+				(skewer-mode auto-complete)))
  (ac-php status "installed" recipe
-	 (:name ac-php :description "Auto complete source for php" :type github :pkgname "xcwen/ac-php" :depends
-		(php-mode auto-complete yasnippet xcscope f s)))
+		 (:name ac-php :description "Auto complete source for php" :type github :pkgname "xcwen/ac-php" :depends
+				(php-mode auto-complete yasnippet xcscope f s)))
  (auto-complete status "installed" recipe
-		(:name auto-complete :website "https://github.com/auto-complete/auto-complete" :description "The most intelligent auto-completion extension." :type github :pkgname "auto-complete/auto-complete" :depends
-		       (popup fuzzy)
-		       :features auto-complete-config :post-init
-		       (progn
-			 (add-to-list 'ac-dictionary-directories
-				      (expand-file-name "dict" default-directory))
-			 (ac-config-default))))
+				(:name auto-complete :website "https://github.com/auto-complete/auto-complete" :description "The most intelligent auto-completion extension." :type github :pkgname "auto-complete/auto-complete" :depends
+					   (popup fuzzy)
+					   :features auto-complete-config :post-init
+					   (progn
+						 (add-to-list 'ac-dictionary-directories
+									  (expand-file-name "dict" default-directory))
+						 (ac-config-default))))
  (cl-lib status "installed" recipe
-	 (:name cl-lib :builtin "24.3" :type elpa :description "Properly prefixed CL functions and macros" :url "http://elpa.gnu.org/packages/cl-lib.html"))
+		 (:name cl-lib :builtin "24.3" :type elpa :description "Properly prefixed CL functions and macros" :url "http://elpa.gnu.org/packages/cl-lib.html"))
  (color-theme status "installed" recipe
-	      (:name color-theme :description "An Emacs-Lisp package with more than 50 color themes for your use. For questions about color-theme" :website "http://www.nongnu.org/color-theme/" :type http-tar :options
-		     ("xzf")
-		     :url "http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz" :load "color-theme.el" :features "color-theme" :post-init
-		     (progn
-		       (color-theme-initialize)
-		       (setq color-theme-is-global t))))
+			  (:name color-theme :description "An Emacs-Lisp package with more than 50 color themes for your use. For questions about color-theme" :website "http://www.nongnu.org/color-theme/" :type http-tar :options
+					 ("xzf")
+					 :url "http://download.savannah.gnu.org/releases/color-theme/color-theme-6.6.0.tar.gz" :load "color-theme.el" :features "color-theme" :post-init
+					 (progn
+					   (color-theme-initialize)
+					   (setq color-theme-is-global t))))
  (color-theme-sanityinc-tomorrow status "installed" recipe
-				 (:name color-theme-sanityinc-tomorrow :description "Two pleasant medium-contrast Emacs color themes in light and dark flavours" :type github :pkgname "purcell/color-theme-sanityinc-tomorrow" :depends color-theme :prepare
-					(progn
-					  (autoload 'color-theme-sanityinc-tomorrow-day "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-day" t)
-					  (autoload 'color-theme-sanityinc-tomorrow-night "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-night" t)
-					  (autoload 'color-theme-sanityinc-tomorrow-blue "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-blue" t)
-					  (autoload 'color-theme-sanityinc-tomorrow-bright "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-bright" t)
-					  (autoload 'color-theme-sanityinc-tomorrow-eighties "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-eighties" t))))
+								 (:name color-theme-sanityinc-tomorrow :description "Two pleasant medium-contrast Emacs color themes in light and dark flavours" :type github :pkgname "purcell/color-theme-sanityinc-tomorrow" :depends color-theme :prepare
+										(progn
+										  (autoload 'color-theme-sanityinc-tomorrow-day "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-day" t)
+										  (autoload 'color-theme-sanityinc-tomorrow-night "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-night" t)
+										  (autoload 'color-theme-sanityinc-tomorrow-blue "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-blue" t)
+										  (autoload 'color-theme-sanityinc-tomorrow-bright "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-bright" t)
+										  (autoload 'color-theme-sanityinc-tomorrow-eighties "color-theme-sanityinc-tomorrow" "color-theme: sanityinc-tomorrow-eighties" t))))
  (company-mode status "installed" recipe
-	       (:name company-mode :website "http://company-mode.github.io/" :description "Modular in-buffer completion framework for Emacs" :type github :pkgname "company-mode/company-mode"))
+			   (:name company-mode :website "http://company-mode.github.io/" :description "Modular in-buffer completion framework for Emacs" :type github :pkgname "company-mode/company-mode"))
  (dash status "installed" recipe
-       (:name dash :description "A modern list api for Emacs. No 'cl required." :type github :pkgname "magnars/dash.el"))
+	   (:name dash :description "A modern list api for Emacs. No 'cl required." :type github :pkgname "magnars/dash.el"))
  (el-get status "installed" recipe
-	 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "master" :pkgname "dimitri/el-get" :info "." :compile
-		("el-get.*\\.el$" "methods/")
-		:features el-get :post-init
-		(when
-		    (memq 'el-get
-			  (bound-and-true-p package-activated-list))
-		  (message "Deleting melpa bootstrap el-get")
-		  (unless package--initialized
-		    (package-initialize t))
-		  (when
-		      (package-installed-p 'el-get)
-		    (let
-			((feats
-			  (delete-dups
-			   (el-get-package-features
-			    (el-get-elpa-package-directory 'el-get)))))
-		      (el-get-elpa-delete-package 'el-get)
-		      (dolist
-			  (feat feats)
-			(unload-feature feat t))))
-		  (require 'el-get))))
+		 (:name el-get :website "https://github.com/dimitri/el-get#readme" :description "Manage the external elisp bits and pieces you depend upon." :type github :branch "master" :pkgname "dimitri/el-get" :info "." :compile
+				("el-get.*\\.el$" "methods/")
+				:features el-get :post-init
+				(when
+					(memq 'el-get
+						  (bound-and-true-p package-activated-list))
+				  (message "Deleting melpa bootstrap el-get")
+				  (unless package--initialized
+					(package-initialize t))
+				  (when
+					  (package-installed-p 'el-get)
+					(let
+						((feats
+						  (delete-dups
+						   (el-get-package-features
+							(el-get-elpa-package-directory 'el-get)))))
+					  (el-get-elpa-delete-package 'el-get)
+					  (dolist
+						  (feat feats)
+						(unload-feature feat t))))
+				  (require 'el-get))))
  (emacs-neotree status "installed" recipe
-		(:name emacs-neotree :description "A emacs tree plugin like NerdTree for Vim." :website "https://github.com/jaypei/emacs-neotree" :type github :pkgname "jaypei/emacs-neotree"))
+				(:name emacs-neotree :description "A emacs tree plugin like NerdTree for Vim." :website "https://github.com/jaypei/emacs-neotree" :type github :pkgname "jaypei/emacs-neotree"))
  (emacs-powerline status "installed" recipe
-		  (:name emacs-powerline :website "https://github.com/jonathanchu/emacs-powerline" :depends
-			 (cl-lib)
-			 :description "Powerline for Emacs" :type github :pkgname "jonathanchu/emacs-powerline" :load-path "." :features powerline))
+				  (:name emacs-powerline :website "https://github.com/jonathanchu/emacs-powerline" :depends
+						 (cl-lib)
+						 :description "Powerline for Emacs" :type github :pkgname "jonathanchu/emacs-powerline" :load-path "." :features powerline))
  (emmet-mode status "installed" recipe
-	     (:name emmet-mode :website "https://github.com/smihica/emmet-mode" :description "Produce HTML from CSS-like selectors." :type "github" :branch "master" :pkgname "smihica/emmet-mode"))
+			 (:name emmet-mode :website "https://github.com/smihica/emmet-mode" :description "Produce HTML from CSS-like selectors." :type "github" :branch "master" :pkgname "smihica/emmet-mode"))
  (epl status "installed" recipe
-      (:name epl :description "EPL provides a convenient high-level API for various package.el versions, and aims to overcome its most striking idiocies." :type github :pkgname "cask/epl"))
+	  (:name epl :description "EPL provides a convenient high-level API for various package.el versions, and aims to overcome its most striking idiocies." :type github :pkgname "cask/epl"))
  (expand-region status "installed" recipe
-		(:name expand-region :type github :pkgname "magnars/expand-region.el" :description "Expand region increases the selected region by semantic units. Just keep pressing the key until it selects what you want." :website "https://github.com/magnars/expand-region.el#readme"))
+				(:name expand-region :type github :pkgname "magnars/expand-region.el" :description "Expand region increases the selected region by semantic units. Just keep pressing the key until it selects what you want." :website "https://github.com/magnars/expand-region.el#readme"))
  (f status "installed" recipe
-    (:name f :website "https://github.com/rejeep/f.el" :description "Modern API for working with files and directories in Emacs" :depends
-	   (s dash)
-	   :type github :pkgname "rejeep/f.el"))
+	(:name f :website "https://github.com/rejeep/f.el" :description "Modern API for working with files and directories in Emacs" :depends
+		   (s dash)
+		   :type github :pkgname "rejeep/f.el"))
  (fuzzy status "installed" recipe
-	(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
+		(:name fuzzy :website "https://github.com/auto-complete/fuzzy-el" :description "Fuzzy matching utilities for GNU Emacs" :type github :pkgname "auto-complete/fuzzy-el"))
  (git-gutter status "installed" recipe
-	     (:name git-gutter :description "Emacs port of GitGutter Sublime Text 2 Plugin" :website "https://github.com/syohex/emacs-git-gutter" :type github :pkgname "syohex/emacs-git-gutter"))
+			 (:name git-gutter :description "Emacs port of GitGutter Sublime Text 2 Plugin" :website "https://github.com/syohex/emacs-git-gutter" :type github :pkgname "syohex/emacs-git-gutter"))
  (haml-mode status "installed" recipe
-	    (:name haml-mode :description "Major mode for editing Haml files" :type github :pkgname "nex3/haml-mode"))
+			(:name haml-mode :description "Major mode for editing Haml files" :type github :pkgname "nex3/haml-mode"))
  (helm status "installed" recipe
-       (:name helm :description "Emacs incremental and narrowing framework" :type github :pkgname "emacs-helm/helm" :autoloads "helm-autoloads" :build
-	      (("make"))
-	      :build/darwin
-	      `(("make" ,(format "EMACS_COMMAND=%s" el-get-emacs)))
-	      :build/windows-nt
-	      (let
-		  ((generated-autoload-file
-		    (expand-file-name "helm-autoloads.el"))
-		   \
-		   (backup-inhibited t))
-	      (update-directory-autoloads default-directory)
-	      nil)))
+	   (:name helm :description "Emacs incremental and narrowing framework" :type github :pkgname "emacs-helm/helm" :autoloads "helm-autoloads" :build
+			  (("make"))
+			  :build/darwin
+			  `(("make" ,(format "EMACS_COMMAND=%s" el-get-emacs)))
+			  :build/windows-nt
+			  (let
+				  ((generated-autoload-file
+					(expand-file-name "helm-autoloads.el"))
+				   \
+				   (backup-inhibited t))
+			  (update-directory-autoloads default-directory)
+			  nil)))
 (helm-c-yasnippet status "required" recipe nil)
 (js2-mode status "installed" recipe
 (:name js2-mode :website "https://github.com/mooz/js2-mode#readme" :description "An improved JavaScript editing mode" :type github :pkgname "mooz/js2-mode" :prepare

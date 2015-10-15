@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("workers-code"
+(("Fansub"
+ (filename . "~/Desktop/Esc/Fansub/")
+ (front-context-string . "Berserk\n  drwxr-")
+ (rear-context-string . "72 Oct  5 20:47 ")
+ (position . 309))
+("workers-code"
  (filename . "~/www/Exploring/workers/app.js")
  (front-context-string)
  (rear-context-string)

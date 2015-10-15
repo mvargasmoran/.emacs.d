@@ -996,6 +996,27 @@ Major mode for editing Haml files.
 
 ;;;***
 
+;;;### (autoloads nil "helm-c-yasnippet/helm-c-yasnippet" "helm-c-yasnippet/helm-c-yasnippet.el"
+;;;;;;  (22047 53855 0 0))
+;;; Generated autoloads from helm-c-yasnippet/helm-c-yasnippet.el
+
+(autoload 'helm-yas-complete "helm-c-yasnippet/helm-c-yasnippet" "\
+List of yasnippet snippets using `helm' interface.
+
+\(fn)" t nil)
+
+(autoload 'helm-yas-visit-snippet-file "helm-c-yasnippet/helm-c-yasnippet" "\
+List of yasnippet snippet files
+
+\(fn)" t nil)
+
+(autoload 'helm-yas-create-snippet-on-region "helm-c-yasnippet/helm-c-yasnippet" "\
+Create a snippet from region.
+
+\(fn &optional START END FILE-NAME)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "js2-mode/js2-imenu-extras" "js2-mode/js2-imenu-extras.el"
 ;;;;;;  (22043 27097 0 0))
 ;;; Generated autoloads from js2-mode/js2-imenu-extras.el
@@ -2089,7 +2110,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "s/s.el" "simple-httpd/simple-httpd-test.el"
 ;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
 ;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el"
-;;;;;;  "zenburn/zenburn.el") (22043 27113 254004 0))
+;;;;;;  "zenburn/zenburn.el") (22047 53855 838760 0))
 
 ;;;***
 

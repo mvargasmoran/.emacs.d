@@ -2,8 +2,9 @@
 
 ;;;; look and feel preferences
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+;;(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
+;;neotree
 (global-set-key [f8] 'neotree-toggle)
 
 

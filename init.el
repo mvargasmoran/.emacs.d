@@ -1,12 +1,25 @@
+;; Most stuff should be in it's own file, but...
+;; first stop that startup stuff, stop it
+
+;; from http://whattheemacsd.com/
+;; Damn there are several good emacs thingys there
+
+;; Turn off mouse interface early in startup to avoid momentary display
+;; Get off my UI ٩(╬ఠ༬ఠ)و
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;; No splash screen please ... jeez
+(setq inhibit-startup-message t)
+
 ;; User configurations files
-;; first let's load a loader ;)
+;; first let's load a loader ᕙ(⇀‸↼‶)ᕗ
 (load "~/.emacs.d/loader.el")
 ;; then load a dir o stuff
 (load-directory "~/.emacs.d/user-conf")
 
-
-(yas-global-mode 1)
 (ac-config-default) ;; auto-complete
+
 
 ;; Beyond this point emacs will do silly stuff by itself ;)
 (custom-set-variables

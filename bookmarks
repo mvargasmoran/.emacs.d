@@ -40,7 +40,7 @@
 ("Code"
  (filename . "~/Code/")
  (front-context-string . ".DS_Store\n  drwx")
- (rear-context-string . "88 Oct  9 21:53 ")
+ (rear-context-string . "88 Oct 14 18:44 ")
  (position . 241))
 ("user-conf"
  (filename . "~/.emacs.d/user-conf/")

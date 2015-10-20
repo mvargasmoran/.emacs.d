@@ -1368,6 +1368,30 @@ A mode for creating a rectangular region to edit
 
 ;;;***
 
+;;;### (autoloads nil "nyan-mode/nyan-mode" "nyan-mode/nyan-mode.el"
+;;;;;;  (22053 44751 0 0))
+;;; Generated autoloads from nyan-mode/nyan-mode.el
+
+(defvar nyan-mode nil "\
+Non-nil if Nyan mode is enabled.
+See the command `nyan-mode' for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `nyan-mode'.")
+
+(custom-autoload 'nyan-mode "nyan-mode/nyan-mode" nil)
+
+(autoload 'nyan-mode "nyan-mode/nyan-mode" "\
+Use NyanCat to show buffer size and position in mode-line.
+You can customize this minor mode, see option `nyan-mode'.
+
+Note: If you turn this mode on then you probably want to turn off
+option `scroll-bar-mode'.
+
+\(fn &optional ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads nil "php-mode/php-mode" "php-mode/php-mode.el"
 ;;;;;;  (22041 24834 0 0))
 ;;; Generated autoloads from php-mode/php-mode.el
@@ -2064,21 +2088,21 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
 ;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
 ;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
-;;;;;;  "el-get/el-get-status.el" "emacs-powerline/powerline.el"
-;;;;;;  "epl/epl.el" "expand-region/cc-mode-expansions.el" "expand-region/clojure-mode-expansions.el"
-;;;;;;  "expand-region/cperl-mode-expansions.el" "expand-region/css-mode-expansions.el"
-;;;;;;  "expand-region/enh-ruby-mode-expansions.el" "expand-region/er-basic-expansions.el"
-;;;;;;  "expand-region/erlang-mode-expansions.el" "expand-region/expand-region-core.el"
-;;;;;;  "expand-region/expand-region-pkg.el" "expand-region/feature-mode-expansions.el"
-;;;;;;  "expand-region/html-mode-expansions.el" "expand-region/js-mode-expansions.el"
-;;;;;;  "expand-region/js2-mode-expansions.el" "expand-region/jsp-expansions.el"
-;;;;;;  "expand-region/latex-mode-expansions.el" "expand-region/nxml-mode-expansions.el"
-;;;;;;  "expand-region/octave-expansions.el" "expand-region/python-el-expansions.el"
-;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
-;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/sml-mode-expansions.el"
-;;;;;;  "expand-region/subword-mode-expansions.el" "expand-region/text-mode-expansions.el"
-;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
-;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "js2-mode/js2-old-indent.el" "jshint-mode/flymake-jshint.el"
+;;;;;;  "el-get/el-get-status.el" "epl/epl.el" "expand-region/cc-mode-expansions.el"
+;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
+;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
+;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
+;;;;;;  "expand-region/expand-region-core.el" "expand-region/expand-region-pkg.el"
+;;;;;;  "expand-region/feature-mode-expansions.el" "expand-region/html-mode-expansions.el"
+;;;;;;  "expand-region/js-mode-expansions.el" "expand-region/js2-mode-expansions.el"
+;;;;;;  "expand-region/jsp-expansions.el" "expand-region/latex-mode-expansions.el"
+;;;;;;  "expand-region/nxml-mode-expansions.el" "expand-region/octave-expansions.el"
+;;;;;;  "expand-region/python-el-expansions.el" "expand-region/python-el-fgallina-expansions.el"
+;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
+;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/subword-mode-expansions.el"
+;;;;;;  "expand-region/text-mode-expansions.el" "expand-region/the-org-mode-expansions.el"
+;;;;;;  "expand-region/web-mode-expansions.el" "f/f.el" "fuzzy/fuzzy.el"
+;;;;;;  "js2-mode/js2-old-indent.el" "jshint-mode/flymake-jshint.el"
 ;;;;;;  "jshint-mode/jshint-mode-pkg.el" "moe-theme/moe-dark-theme.el"
 ;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
 ;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
@@ -2087,7 +2111,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "s/s.el" "simple-httpd/simple-httpd-test.el"
 ;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
 ;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el"
-;;;;;;  "zenburn/zenburn.el") (22047 53855 838760 0))
+;;;;;;  "zenburn/zenburn.el") (22053 47585 757800 0))
 
 ;;;***
 

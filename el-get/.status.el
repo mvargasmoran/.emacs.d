@@ -57,10 +57,6 @@
 				  (require 'el-get))))
  (emacs-neotree status "installed" recipe
 				(:name emacs-neotree :description "A emacs tree plugin like NerdTree for Vim." :website "https://github.com/jaypei/emacs-neotree" :type github :pkgname "jaypei/emacs-neotree"))
- (emacs-powerline status "installed" recipe
-				  (:name emacs-powerline :website "https://github.com/jonathanchu/emacs-powerline" :depends
-						 (cl-lib)
-						 :description "Powerline for Emacs" :type github :pkgname "jonathanchu/emacs-powerline" :load-path "." :features powerline))
  (emmet-mode status "installed" recipe
 			 (:name emmet-mode :website "https://github.com/smihica/emmet-mode" :description "Produce HTML from CSS-like selectors." :type "github" :branch "master" :pkgname "smihica/emmet-mode"))
  (epl status "installed" recipe
@@ -106,6 +102,8 @@
 (add-to-list 'custom-theme-load-path default-directory)))
 (multiple-cursors status "installed" recipe
 (:name multiple-cursors :description "An experiment in adding multiple cursors to emacs" :type github :pkgname "magnars/multiple-cursors.el"))
+(nyan-mode status "installed" recipe
+(:name nyan-mode :description "Nyan Cat for Emacs! Nyanyanyanyanyanyanyanyanyan!" :type github :pkgname "TeMPOraL/nyan-mode" :features nyan-mode))
 (php-mode status "installed" recipe
 (:name php-mode :description "A PHP mode for GNU Emacs " :type github :pkgname "ejmr/php-mode" :website "https://github.com/ejmr/php-mode"))
 (pkg-info status "installed" recipe

@@ -23,8 +23,12 @@
       helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
       helm-ff-file-name-history-use-recentf t)
 
+;; I need helm projectile available on startup
+(helm-projectile-on)
+
 ;;(helm-mode 1)
 ;; Projectile Keybndings yes, I don't need all
 (global-set-key (kbd "C-c p") 'helm-projectile-find-file-dwim)
 (global-set-key (kbd "C-c d") 'helm-projectile-find-dir)
-(global-set-key (kbd "C-c s") 'helm-projectile-switch-project)
+(global-set-key (kbd "C-c S") 'helm-projectile-switch-project)
+(global-set-key (kbd "C-c b") 'helm-projectile-switch-to-buffer)

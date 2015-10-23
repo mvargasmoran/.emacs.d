@@ -22,6 +22,7 @@
 
 (ac-config-default) ;; auto-complete
 
+;;nyan mode just to be goffy
 (nyan-mode )
 (nyan-start-animation )
 
@@ -31,12 +32,12 @@
 ;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
 (custom-set-faces
- '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line ((t (:foreground "#030303" :background "lightskyblue" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
 
-(setq powerline-color1 "grey22")
-(setq powerline-color2 "grey40")
+;;(setq powerline-color1 "grey22")
+;;(setq powerline-color2 "grey40")
 
 ;; Beyond this point emacs will do silly stuff by itself ;)
 (custom-set-variables
@@ -55,7 +56,7 @@
  '(fci-rule-color "#515151")
  '(fringe-mode 0 nil (fringe))
  '(helm-mode t)
- '(helm-projectile nil)
+ '(helm-projectile )
  
  '(company-mode)
  '(tool-bar-mode nil)

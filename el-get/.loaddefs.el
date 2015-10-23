@@ -1528,7 +1528,7 @@ version.
 ;;;***
 
 ;;;### (autoloads nil "projectile/helm-projectile" "projectile/helm-projectile.el"
-;;;;;;  (22040 10996 0 0))
+;;;;;;  (22058 17481 0 0))
 ;;; Generated autoloads from projectile/helm-projectile.el
 
 (defvar helm-projectile-fuzzy-match t "\
@@ -1560,14 +1560,15 @@ Turn off helm-projectile key bindings.
 \(fn)" t nil)
 
 (autoload 'helm-projectile-grep "projectile/helm-projectile" "\
-Helm version of projectile-grep.
+Helm version of `projectile-grep'.
+DIR is the project root, if not set then current directory is used
 
-\(fn)" t nil)
+\(fn &optional DIR)" t nil)
 
 (autoload 'helm-projectile-ack "projectile/helm-projectile" "\
 Helm version of projectile-ack.
 
-\(fn)" t nil)
+\(fn &optional DIR)" t nil)
 
 (autoload 'helm-projectile-ag "projectile/helm-projectile" "\
 Helm version of projectile-ag.
@@ -1587,7 +1588,7 @@ If invoked outside of a project, displays a list of known projects to jump.
 ;;;***
 
 ;;;### (autoloads nil "projectile/persp-projectile" "projectile/persp-projectile.el"
-;;;;;;  (22040 10996 0 0))
+;;;;;;  (22058 17481 0 0))
 ;;; Generated autoloads from projectile/persp-projectile.el
 
 (autoload 'projectile-persp-switch-project "projectile/persp-projectile" "\
@@ -1606,7 +1607,7 @@ perspective.
 ;;;***
 
 ;;;### (autoloads nil "projectile/projectile" "projectile/projectile.el"
-;;;;;;  (22040 10996 0 0))
+;;;;;;  (22058 17481 0 0))
 ;;; Generated autoloads from projectile/projectile.el
 
 (autoload 'projectile-cache-current-file "projectile/projectile" "\
@@ -1760,6 +1761,7 @@ Open `dired' at the root of the project.
 Open `vc-dir' at the root of the project.
 
 For git projects `magit-status-internal' is used if available.
+For hg projects `monky-status' is used if available.
 
 \(fn &optional PROJECT-ROOT)" t nil)
 
@@ -2111,7 +2113,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "s/s.el" "simple-httpd/simple-httpd-test.el"
 ;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
 ;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el"
-;;;;;;  "zenburn/zenburn.el") (22053 47585 757800 0))
+;;;;;;  "zenburn/zenburn.el") (22058 17483 563653 0))
 
 ;;;***
 

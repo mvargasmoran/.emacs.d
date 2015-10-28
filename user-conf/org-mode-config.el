@@ -7,6 +7,20 @@
 
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
+;; magnars stuff to update when removing a TODO
+(defun myorg-update-parent-cookie ()
+  (when (equal major-mode 'org-mode)
+    (save-excursion
+      (ignore-errors
+        (org-back-to-heading)
+        (org-update-parent-todo-statistics)))))
+
+(defadvice org-kill-line (after fix-cookies activate)
+  (myorg-update-parent-cookie))
+
+(defadvice kill-whole-line (after fix-cookies activate)
+  (myorg-update-parent-cookie))
+
 ;; adding new statuses to org mode
 (setq org-todo-keywords
 	  '((sequence "TODO" "IN-PROGRESS" "FEEDBACK" "|" "DONE" "GOOD-ENOUGH" "|" "QA-UAT")))

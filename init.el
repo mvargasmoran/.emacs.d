@@ -20,6 +20,9 @@
 ;; then load a dir o stuff
 (load-directory "~/.emacs.d/user-conf")
 
+;; it's important to me that I can just get back to work
+(desktop-save-mode 1)
+
 (ac-config-default) ;; auto-complete
 
 ;;nyan mode just to be goffy

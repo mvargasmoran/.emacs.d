@@ -60,7 +60,6 @@
  '(fringe-mode 0 nil (fringe))
  '(helm-mode t)
  '(helm-projectile )
- '(diminish )
  '(company-mode)
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)

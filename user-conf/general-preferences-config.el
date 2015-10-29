@@ -2,6 +2,9 @@
 
 ;;;; look and feel preferences
 
+;; no scratch message, I know what it does already
+(setq initial-scratch-message "")
+
 ;;(tool-bar-mode -1)
 ;;(scroll-bar-mode -1)
 ;;neotree
@@ -24,6 +27,16 @@
 
 ;;;;; Editor
 (global-git-gutter-mode t)
+
+;; Moving ~**** backup-files away.-
+;; following Magnar's  whattheemacs.d
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "backups")))))
+
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
 
 
 ;;;; sound stuff

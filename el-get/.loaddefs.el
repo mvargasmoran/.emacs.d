@@ -570,6 +570,24 @@ what diminished modes would be on the mode-line if they were still minor.
 
 ;;;***
 
+;;;### (autoloads nil "dired-details+/dired-details+" "dired-details+/dired-details+.el"
+;;;;;;  (22066 46960 0 0))
+;;; Generated autoloads from dired-details+/dired-details+.el
+
+(defvar dired-details-hidden-string "" "\
+*This string will be shown in place of file details and symbolic links.")
+
+(custom-autoload 'dired-details-hidden-string "dired-details+/dired-details+" t)
+
+(defvar dired-details-propagate-flag t "\
+*Non-nil means next Dired buffer should be displayed the same.
+The last `dired-details-state' value set is used by the next Dired
+buffer created.")
+
+(custom-autoload 'dired-details-propagate-flag "dired-details+/dired-details+" t)
+
+;;;***
+
 ;;;### (autoloads nil "el-get/el-get" "el-get/el-get.el" (22039 578
 ;;;;;;  0 0))
 ;;; Generated autoloads from el-get/el-get.el
@@ -2132,25 +2150,25 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "company-mode/company-clang.el" "company-mode/company-cmake.el"
 ;;;;;;  "company-mode/company-eclim.el" "company-mode/company-template.el"
 ;;;;;;  "company-mode/company-tests.el" "dash/dash-functional.el"
-;;;;;;  "dash/dash.el" "el-get/el-get-autoloading.el" "el-get/el-get-build.el"
-;;;;;;  "el-get/el-get-byte-compile.el" "el-get/el-get-core.el" "el-get/el-get-custom.el"
-;;;;;;  "el-get/el-get-dependencies.el" "el-get/el-get-install.el"
-;;;;;;  "el-get/el-get-methods.el" "el-get/el-get-notify.el" "el-get/el-get-recipes.el"
-;;;;;;  "el-get/el-get-status.el" "epl/epl.el" "expand-region/cc-mode-expansions.el"
-;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/cperl-mode-expansions.el"
-;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/enh-ruby-mode-expansions.el"
-;;;;;;  "expand-region/er-basic-expansions.el" "expand-region/erlang-mode-expansions.el"
-;;;;;;  "expand-region/expand-region-core.el" "expand-region/expand-region-pkg.el"
-;;;;;;  "expand-region/feature-mode-expansions.el" "expand-region/html-mode-expansions.el"
-;;;;;;  "expand-region/js-mode-expansions.el" "expand-region/js2-mode-expansions.el"
-;;;;;;  "expand-region/jsp-expansions.el" "expand-region/latex-mode-expansions.el"
-;;;;;;  "expand-region/nxml-mode-expansions.el" "expand-region/octave-expansions.el"
-;;;;;;  "expand-region/python-el-expansions.el" "expand-region/python-el-fgallina-expansions.el"
-;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
-;;;;;;  "expand-region/sml-mode-expansions.el" "expand-region/subword-mode-expansions.el"
-;;;;;;  "expand-region/text-mode-expansions.el" "expand-region/the-org-mode-expansions.el"
-;;;;;;  "expand-region/web-mode-expansions.el" "f/f.el" "fuzzy/fuzzy.el"
-;;;;;;  "js2-mode/js2-old-indent.el" "jshint-mode/flymake-jshint.el"
+;;;;;;  "dash/dash.el" "dired-details/dired-details.el" "el-get/el-get-autoloading.el"
+;;;;;;  "el-get/el-get-build.el" "el-get/el-get-byte-compile.el"
+;;;;;;  "el-get/el-get-core.el" "el-get/el-get-custom.el" "el-get/el-get-dependencies.el"
+;;;;;;  "el-get/el-get-install.el" "el-get/el-get-methods.el" "el-get/el-get-notify.el"
+;;;;;;  "el-get/el-get-recipes.el" "el-get/el-get-status.el" "epl/epl.el"
+;;;;;;  "expand-region/cc-mode-expansions.el" "expand-region/clojure-mode-expansions.el"
+;;;;;;  "expand-region/cperl-mode-expansions.el" "expand-region/css-mode-expansions.el"
+;;;;;;  "expand-region/enh-ruby-mode-expansions.el" "expand-region/er-basic-expansions.el"
+;;;;;;  "expand-region/erlang-mode-expansions.el" "expand-region/expand-region-core.el"
+;;;;;;  "expand-region/expand-region-pkg.el" "expand-region/feature-mode-expansions.el"
+;;;;;;  "expand-region/html-mode-expansions.el" "expand-region/js-mode-expansions.el"
+;;;;;;  "expand-region/js2-mode-expansions.el" "expand-region/jsp-expansions.el"
+;;;;;;  "expand-region/latex-mode-expansions.el" "expand-region/nxml-mode-expansions.el"
+;;;;;;  "expand-region/octave-expansions.el" "expand-region/python-el-expansions.el"
+;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
+;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/sml-mode-expansions.el"
+;;;;;;  "expand-region/subword-mode-expansions.el" "expand-region/text-mode-expansions.el"
+;;;;;;  "expand-region/the-org-mode-expansions.el" "expand-region/web-mode-expansions.el"
+;;;;;;  "f/f.el" "fuzzy/fuzzy.el" "js2-mode/js2-old-indent.el" "jshint-mode/flymake-jshint.el"
 ;;;;;;  "jshint-mode/jshint-mode-pkg.el" "moe-theme/moe-dark-theme.el"
 ;;;;;;  "moe-theme/moe-light-theme.el" "moe-theme/moe-theme-pkg.el"
 ;;;;;;  "moe-theme/moe-theme-switcher.el" "moe-theme/moe-theme.el"
@@ -2159,7 +2177,7 @@ See `yas-minor-mode' for more information on Yas minor mode.
 ;;;;;;  "popup/popup.el" "s/s.el" "simple-httpd/simple-httpd-test.el"
 ;;;;;;  "skewer-mode/cache-table.el" "skewer-mode/skewer-mode-pkg.el"
 ;;;;;;  "yasnippet/yasnippet-debug.el" "yasnippet/yasnippet-tests.el"
-;;;;;;  "zenburn/zenburn.el") (22065 2491 91793 0))
+;;;;;;  "zenburn/zenburn.el") (22066 46960 802629 0))
 
 ;;;***
 

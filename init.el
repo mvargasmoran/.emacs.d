@@ -12,8 +12,6 @@
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
 
-
-
 ;; User configurations files
 ;; first let's load a loader ᕙ(⇀‸↼‶)ᕗ
 (load "~/.emacs.d/loader.el")

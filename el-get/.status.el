@@ -112,6 +112,27 @@
 (:name multiple-cursors :description "An experiment in adding multiple cursors to emacs" :type github :pkgname "magnars/multiple-cursors.el"))
 (nyan-mode status "installed" recipe
 (:name nyan-mode :description "Nyan Cat for Emacs! Nyanyanyanyanyanyanyanyanyan!" :type github :pkgname "TeMPOraL/nyan-mode" :features nyan-mode))
+(org-mode status "installed" recipe
+(:name org-mode :website "http://orgmode.org/" :description "Org-mode is for keeping notes, maintaining ToDo lists, doing project planning, and authoring with a fast and effective plain-text system." :type git :url "git://orgmode.org/org-mode.git" :info "doc" :build/berkeley-unix `,(mapcar
+(lambda
+(target)
+(list "gmake" target
+(concat "EMACS="
+(shell-quote-argument el-get-emacs))))
+'("oldorg"))
+:build `,(mapcar
+(lambda
+(target)
+(list "make" target
+(concat "EMACS="
+(shell-quote-argument el-get-emacs))))
+'("oldorg"))
+:load-path
+("." "contrib/lisp" "lisp")
+:load
+("lisp/org-loaddefs.el")))
+(org-reveal status "installed" recipe
+(:name org-reveal :type github :pkgname "yjwen/org-reveal" :description "Exports Org-mode contents to Reveal.js HTML presentation." :depends org-mode :features ox-reveal))
 (php-mode status "installed" recipe
 (:name php-mode :description "A PHP mode for GNU Emacs " :type github :pkgname "ejmr/php-mode" :website "https://github.com/ejmr/php-mode"))
 (pkg-info status "installed" recipe

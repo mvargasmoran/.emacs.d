@@ -1,5 +1,12 @@
 ;; YASnippets stuff
 
+;; I really need to add my own Snippets (and those I've found laying around in the internetz
+;; straight outa https://github.com/capitaomorte/yasnippet
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"					;; personal snippets
+		"~/.emacs.d/el-get/yasnippet/yasmate"	;; the yasmate collection
+        "~/.emacs.d/el-get/yasnippet/snippets"  ;; the default collection
+        ))
 ;; Straight from https://github.com/emacs-jp/helm-c-yasnippet
 
 (setq helm-yas-space-match-any-greedy t)

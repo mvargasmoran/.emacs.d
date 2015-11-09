@@ -11,3 +11,7 @@
 	  (message "Could not find git project root."))))
 
 (global-set-key (kbd "C-c C-p") 'neotree-ffip-project-dir)
+
+
+(defadvice helm-projectile-find-file (after helm-projectile-find-file activate)
+  (neotree-dir default-directory))

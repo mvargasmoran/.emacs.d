@@ -1,3 +1,9 @@
+;; Adding some keybindings
+;;(global-set-key (kbd ""))
+
+(global-set-key (kbd "C-c t") 'kill-this-buffer)
+(global-set-key (kbd "C-c C-e") 'eval-buffer)
+
 ;; Duplicating lines
 ;; This is missing and it really is useful
 ;; FROM: http://rejeep.github.io/emacs/elisp/2010/03/11/duplicate-current-line-or-region-in-emacs.html

@@ -2,6 +2,9 @@
 
 ;;;; look and feel preferences
 
+;; Mah cursor is black on my black emacs theme. Get some contrast pls.
+(set-cursor-color "#ffffff") 
+
 ;; no scratch message, I know what it does already
 (setq initial-scratch-message "")
 

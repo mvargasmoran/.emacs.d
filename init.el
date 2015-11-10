@@ -33,6 +33,10 @@
 ;;  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(mode-line ((t (:foreground "#030303" :background "lightskyblue" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
@@ -50,42 +54,42 @@
    [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    (vector "#cccccc" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#66cccc" "#2d2d2d"))
+ '(column-number-mode t)
+ '(company-mode nil)
  '(custom-enabled-themes (quote (moe-dark)))
  '(custom-safe-themes
    (quote
-    ("8e5dd88c42089566d5f8e1a23d3017c213eeccd94a7b9e1a58a2dc3e08cb26d5" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
+	("8e5dd88c42089566d5f8e1a23d3017c213eeccd94a7b9e1a58a2dc3e08cb26d5" "628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
  '(fci-rule-color "#515151")
  '(fringe-mode 0 nil (fringe))
  '(helm-mode t)
- '(helm-projectile )
- '(company-mode)
+ '(helm-projectile nil)
+ '(menu-bar-mode nil)
+ '(tab-stop-list
+   (quote
+	(4 8 12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96 100 104 108 112 116 120)))
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
-    ((20 . "#f2777a")
-     (40 . "#f99157")
-     (60 . "#ffcc66")
-     <
-     (80 . "#99cc99")
-     (100 . "#66cccc")
-     (120 . "#6699cc")
-     (140 . "#cc99cc")
-     (160 . "#f2777a")
-     (180 . "#f99157")
-     (200 . "#ffcc66")
-     (220 . "#99cc99")
-     (240 . "#66cccc")
-     (260 . "#6699cc")
-     (280 . "#cc99cc")
-     (300 . "#f2777a")
-     (320 . "#f99157")
-     (340 . "#ffcc66")
-     (360 . "#99cc99"))))
+	((20 . "#f2777a")
+	 (40 . "#f99157")
+	 (60 . "#ffcc66")
+	 <
+	 (80 . "#99cc99")
+	 (100 . "#66cccc")
+	 (120 . "#6699cc")
+	 (140 . "#cc99cc")
+	 (160 . "#f2777a")
+	 (180 . "#f99157")
+	 (200 . "#ffcc66")
+	 (220 . "#99cc99")
+	 (240 . "#66cccc")
+	 (260 . "#6699cc")
+	 (280 . "#cc99cc")
+	 (300 . "#f2777a")
+	 (320 . "#f99157")
+	 (340 . "#ffcc66")
+	 (360 . "#99cc99"))))
  '(vc-annotate-very-old-color nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+

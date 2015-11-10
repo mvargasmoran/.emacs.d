@@ -1,8 +1,26 @@
+;; I want to let everybody know where this file path is
+;; from http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
+(defun mvm/file-name-clipboard ()
+  "Put the current file name on the clipboard"
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (with-temp-buffer
+        (insert filename)
+        (clipboard-kill-region (point-min) (point-max)))
+      (message filename))))
+
+
 ;; Adding some keybindings
 ;;(global-set-key (kbd ""))
 
 (global-set-key (kbd "C-c t") 'kill-this-buffer)
 (global-set-key (kbd "C-c C-e") 'eval-buffer)
+
+;; Joining lines
+(global-set-key (kbd "C-c j") 'join-line)
 
 ;; Duplicating lines
 ;; This is missing and it really is useful
